@@ -11,6 +11,7 @@ function setup() {
 
 function draw() {
     background(0, 0, 70);
+    translate(0, height / 4 + 30);
     push();
     smooth();
 

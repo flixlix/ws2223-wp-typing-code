@@ -4,6 +4,7 @@ function setup() {
 }
 
 function draw() {
+    textFont('Courier New');
     background(0, 0, 70);
     push();
     smooth();
