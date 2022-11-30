@@ -25,7 +25,7 @@ function setup() {
     );
 
     // revolute
-    rect2.constrainTo(rect1, { length: 0, stiffness: .1, color: '#62BBC1' });
+    rect2.constrainTo(rect1, { length: 0, stiffness: .001, color: '#62BBC1' });
 
     // rubberband
     rect1.constrainTo(rect2, {
@@ -46,7 +46,7 @@ function setup() {
     wallRight = new Block(world, { x: width - 2, y: height / 2, w: 10, h: height, color: wallColor }, { isStatic: true });
 
     // ceiling
-    ceiling = new Block(world, { x: width / 2, y: 0, w: width, h: 10, color: wallColor }, { isStatic: true });
+    ceiling = new Block(world, { x: width / 2 - 10, y: 0, w: width, h: 10, color: wallColor }, { isStatic: false });
 
     // setup mouse
     mouse = new Mouse(engine, canvas);

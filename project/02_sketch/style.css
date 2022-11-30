@@ -1,0 +1,164 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.typo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  height: 100vh;
+}
+
+.pyramid {
+  width: 0;
+  height: 0;
+  border-left: 3rem solid transparent;
+  border-right: 3rem solid transparent;
+  border-bottom: 5.5rem solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: bottom;
+  align-items: center;
+  overflow: visible;
+  animation: dry-out 10s linear infinite;
+}
+
+@keyframes dry-out {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(0);
+    transform-origin: bottom center;
+  }
+}
+
+.pyramid > .top {
+  padding-top: 0.2rem;
+  width: 0;
+  height: 0;
+  border-left: 1.2rem solid transparent;
+  border-right: 1.2rem solid transparent;
+  border-bottom: 2.2rem solid white;
+  display: flex;
+  position: relative;
+}
+
+.wave {
+  position: absolute;
+  width: 42px;
+  height: 20px;
+  left: 50%;
+  transform: translate(-50%, 100%);
+}
+
+.wave .first-wave {
+  /* background-color: aqua; */
+  position: absolute;
+  width: 20px;
+  top: 0;
+  right: 0;
+  transform: translate(1px, 40%) rotate(90deg);
+}
+
+.wave .second-wave {
+  /* background-color: red; */
+  fill: #fff;
+  position: absolute;
+  width: 27.8px;
+  /* height: 10px; */
+  top: 0;
+  left: 0;
+  transform: translate(0px, 0px) rotate(270deg);
+}
+
+.letter {
+  font-size: 7rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: transparent;
+  -webkit-text-stroke: 3px black;
+}
+
+.inverted-horizontal {
+  transform: scaleX(-1);
+}
+
+.bottom-wave {
+  position: absolute;
+  width: 100vw;
+  height: 30%;
+  bottom: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  fill: #0099ff;
+}
+
+.filler {
+  position: absolute;
+  width: 100vw;
+  height: 30%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #0b4781;
+}
+
+/* waves */
+.ocean {
+  height: 40px; /* change the height of the waves here */
+  width: 100%;
+  position: absolute;
+  bottom: 30%;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+  animation: get-bigger 10s linear infinite;
+}
+
+.wave-animated {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23003F7C'/%3E%3C/svg%3E");
+  position: absolute;
+  overflow: hidden;
+  width: 200%;
+  height: 100%;
+  animation: wave 10s -3s ease-in-out alternate infinite;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.8;
+}
+
+.wave-animated:nth-of-type(2) {
+  bottom: 0;
+  animation: wave 18s ease-in-out alternate-reverse infinite;
+  opacity: 0.5;
+}
+
+.wave-animated:nth-of-type(3) {
+  bottom: 0;
+  animation: wave 20s -1s ease-in-out alternate infinite;
+  opacity: 0.5;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes get-bigger {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: translateY(-1450%) scaleY(30);
+  }
+}
