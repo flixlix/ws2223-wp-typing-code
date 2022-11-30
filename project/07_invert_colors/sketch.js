@@ -15,7 +15,7 @@ lettersChildren = Array.from(letters.children);
 
 function updateYears() {
     yearsElement.innerHTML = yearsLeft;
-    if (yearsLeft >= 0) yearsLeft--;
+    if (yearsLeft >= 2) yearsLeft = yearsLeft - 2;
 }
 
 function letterTilt() {
@@ -49,7 +49,7 @@ function doAnimations() {
     letterTilt();
     letterFillUp();
     fillUpBackground();
-    yearsInterval = setInterval(updateYears, 120);
+    yearsInterval = setInterval(updateYears, 200);
     setTimeout(resetAnimations, animationDuration - 50);
 }
 
