@@ -4,11 +4,11 @@ body {
   overflow: hidden;
   font-family: "Roboto FLex", sans-serif; /* font-family: 'Roboto', sans-serif; */
   font-variation-settings: "wght" 0, "GRAD" 88;
-  color: white;
+  color: #d7ebec;
 }
 
 .background-container {
-  background: white;
+  background: #d7ebec;
   position: absolute;
   top: 0;
   left: 0;
@@ -37,7 +37,7 @@ body {
 /* A black layer on top of the white bottom layer */
 #blackbg {
   align-self: flex-end;
-  background: black;
+  background-color: #054449;
   width: 100%;
   height: 25vh;
   /* animation: bg-fill-up 1s ease 1; */
@@ -49,7 +49,7 @@ body {
   }
   100% {
     height: 73.8vh;
-    background-color: #00c2d1;
+    background-color: #054449;
   }
 }
 
@@ -92,7 +92,6 @@ body {
   }
   100% {
     top: 30%;
-    opacity: 0;
   }
 }
 

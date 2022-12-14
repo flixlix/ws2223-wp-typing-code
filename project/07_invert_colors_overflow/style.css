@@ -48,8 +48,7 @@ body {
   0% {
   }
   100% {
-    height: 73.8vh;
-    background-color: #00c2d1;
+    height: 100vh;
   }
 }
 
@@ -90,12 +89,23 @@ body {
 @keyframes text-fill-up {
   0% {
   }
+  50% {
+    top: 40%;
+  }
   100% {
-    top: 30%;
-    opacity: 0;
+    top: 120%;
   }
 }
 
+/* @keyframes text-empty-back-down {
+  0% {
+    top: 20%;
+  }
+  100% {
+    top: 110%;
+  }
+}
+ */
 @keyframes text-thinner {
   0% {
     font-variation-settings: "wght" 1000, "GRAD" 88;

@@ -83,7 +83,3 @@ setInterval(() => {
     /* start animations */
     doAnimations();
 }, animationDuration);
-
-
-
-

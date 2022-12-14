@@ -40,7 +40,11 @@ function letterTilt() {
 
 
 function letterFillUp() {
+    /* letters.style.animation = `text-fill-up 1000ms ease ${animationIteration} forward ease-in ${animationIteration}`; */
     letters.style.animation = `text-fill-up ${animationDuration}ms ease ${animationIteration}`;
+    setTimeout(() => {
+        letters.style.animation = `text-empty-back-down ${animationDuration}ms ease ${animationIteration}`;
+    }, animationDuration);
 }
 
 
@@ -60,8 +64,8 @@ function doAnimations() {
     letterTilt();
     letterFillUp();
     fillUpBackground();
-    yearsInterval = setInterval(updateYears, 200);
-    setTimeout(resetAnimations, animationDuration - 100);
+    yearsInterval = setInterval(updateYears, 400);
+    setTimeout(resetAnimations, (animationDuration * 2) - 100);
 }
 
 function resetAnimations() {
@@ -82,8 +86,4 @@ doAnimations();
 setInterval(() => {
     /* start animations */
     doAnimations();
-}, animationDuration);
-
-
-
-
+}, animationDuration * 2);
